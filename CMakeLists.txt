@@ -1,8 +1,18 @@
 cmake_minimum_required(VERSION 3.25)
-project(KR_Exercises C)
+#project(KR_Exercises C)
+project(KR_Exercises LANGUAGES C CXX)
 set(CMAKE_C_STANDARD 11)
 
-add_executable(ex_01_01_hello_world_ex_hello_c 01.01-hello_world/ex-hello.c)
+
+# C++11 for C++ targets
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(ex_01_01_hello_world_ex_hello_c    01.01-hello_world/ex-hello.c)
+add_executable(ex_01_01_hello_world_ex_hello_c_01 01.01-hello_world/01-mem_layout.c)
+add_executable(ex_01_01_hello_world_ex_hello_c_02 01.01-hello_world/02-max_cpu.cpp)
+add_executable(ex_01_01_hello_world_ex_hello_c_03 01.01-hello_world/03-all_6_cores.cpp)
+add_executable(ex_01_01_hello_world_ex_hello_c_04 01.01-hello_world/04-thread_join.cpp)
+add_executable(ex_01_01_hello_world_ex_hello_c_05 01.01-hello_world/05-detached_thread_demo.cpp)
 add_executable(ex_01_02_variables_ex_fahrenheit_c 01.02-variables/ex-fahrenheit.c)
 add_executable(ex_01_02_variables_ex_final_fahrenheit_c 01.02-variables/ex-final-fahrenheit.c)
 add_executable(ex_01_02_variables_ex_float_fahrenheit_c 01.02-variables/ex-float_fahrenheit.c)
